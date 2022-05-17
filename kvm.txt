@@ -1,0 +1,13 @@
+Assignment 7 (KVM)
+
+egrep -c "(vmx|svm)" /proc/cpuinfo
+
+sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils
+
+sudo adduser libvirt
+sudo adduser kvm
+
+
+sudo apt install virt-manager
+
+sudo virt-manager

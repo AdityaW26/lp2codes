@@ -1,0 +1,62 @@
+Assignment 8 (Sales Force)
+
+
+Cal.apex file
+
+public class Calculator {
+    
+    public integer num1 {get;set;}
+    public integer num2 {get;set;}
+    public integer res {get;set;}
+    
+    
+    public void add(){
+        res = num1+num2;
+    }
+    public void sub(){
+        res = num1-num2;
+    }
+
+    public void mul(){
+        res = num1*num2;
+    }
+
+    public void div(){
+        res = num1/num2;
+    }
+
+
+}
+
+
+
+Visual file
+
+<apex:page controller="Calculator" >
+    <apex:form >
+        <apex:pageBlock title="Calculator">
+            
+            
+            Number one : <apex:inputText value="{!num1}"></apex:inputText><br/>
+            Number two : <apex:inputText value="{!num2}"></apex:inputText><br/>
+            
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="ADD" action="{!add}"/>
+                <apex:commandButton value="SUB" action="{!sub}"/>
+                <apex:commandButton value="MUL" action="{!mul}"/>
+                <apex:commandButton value="DIV" action="{!div}"/>
+               
+            
+            
+            </apex:pageBlockButtons>
+            
+            
+            RESULT : <apex:outputText value="{!res}"></apex:outputText>
+            
+            
+        </apex:pageBlock>
+            
+    </apex:form>
+</apex:page>
+             
